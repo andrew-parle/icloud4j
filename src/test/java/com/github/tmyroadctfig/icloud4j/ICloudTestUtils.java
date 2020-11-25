@@ -18,7 +18,8 @@ package com.github.tmyroadctfig.icloud4j;
 
 import com.github.tmyroadctfig.icloud4j.json.TrustedDevice;
 import org.apache.http.StatusLine;
-import org.apache.log4j.BasicConfigurator;
+import org.apache.logging.log4j.core.config.Configurator;
+import org.apache.logging.log4j.core.config.DefaultConfiguration;
 
 import java.util.List;
 
@@ -29,7 +30,7 @@ public class ICloudTestUtils
 {
     static
     {
-        BasicConfigurator.configure();
+        Configurator.initialize(new DefaultConfiguration());
     }
 
     /**

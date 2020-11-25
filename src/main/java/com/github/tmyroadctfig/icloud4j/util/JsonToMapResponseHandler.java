@@ -22,7 +22,8 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.StatusLine;
 import org.apache.http.client.ResponseHandler;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -41,7 +42,7 @@ public class JsonToMapResponseHandler implements ResponseHandler<Map<String,Obje
     /**
      * The logger.
      */
-    private static final Logger logger = Logger.getLogger(JsonToMapResponseHandler.class);
+    private static final Logger logger = LogManager.getLogger(JsonToMapResponseHandler.class);
 
     @Override
     public Map<String, Object> handleResponse(HttpResponse response) throws IOException
